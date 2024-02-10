@@ -4,6 +4,7 @@
 // с разными телефонами, их необходимо считать, как одного человека с разными
 // телефонами.
 // Вывод должен быть отсортирован по убыванию числа телефонов.
+
 import java.io.*;
 import java.util.*;
 
@@ -18,6 +19,7 @@ public class PhoneBook {
                 if (name.isEmpty()) {
                     break;
                 }
+                
                 System.out.print("Введите номер телефона в формате +70000000000: ");
                 String phoneNumber = scanner.nextLine();
 
@@ -34,6 +36,7 @@ public class PhoneBook {
         }
 
         // Сортируем по убыванию числа телефонов
+
         List<Map.Entry<String, List<String>>> sortedEntries = new ArrayList<>(phoneBook.entrySet());
         sortedEntries.sort(Comparator.comparing(entry -> -entry.getValue().size()));
 
